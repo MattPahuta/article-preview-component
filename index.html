@@ -27,22 +27,79 @@
           </div>
   
           <footer class="card-footer">
-            <img src="./images/avatar-michelle.jpg" alt="Michelle Appleton" class="author-avatar">
-            <div class="card-meta">
-              <p class="author">Michelle Appleton</p>
-              <p class="article-date">28 Jun 2020</p>
-            </div>
-            <div class="share-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+            <!-- footer author info for default state -->
+            <!-- hide this div on share-icon click -->
+            <div class="author-info">
+              <img src="./images/avatar-michelle.jpg" alt="Michelle Appleton" class="author-avatar">
+              <div class="card-meta">
+                <p class="author">Michelle Appleton</p>
+                <p class="article-date">28 Jun 2020</p>
+              </div>
             </div>
 
+            <!-- footer content for active state (clicked share icon) -->
+            <!-- unhide this div on share-icon click -->
+            <div class="card-share hidden">
+
+              <div class="card-social">
+                <p class="share-label">Share</p>
+                <ul class="social-icon-list">
+                  <li>
+                    <a href="https://www.facebook.com" target="_blank">
+                      <img src="./images/icon-facebook.svg" alt="Facebook logo">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.twitter.com" target="_blank">
+                      <img src="./images/icon-twitter.svg" alt="Twitter logo">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.pinterest.com" target="_blank">
+                      <img src="./images/icon-pinterest.svg" alt="Pinterest logo">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              
+            </div>
+
+            <div id="share-icon" class="share-icon bg-light__share">
+              <svg id="share-arrow" class="share-arrow-default" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+            </div>
           </footer>
+
+          <!-- <div class="active-card-footer hidden">
+             
+            <p class="share-label">Share</p>
+            <div class="social-icon">
+              <a href="#">
+                <img src="./images/icon-facebook.svg" alt="Facebook">
+              </a>
+            </div>
+            <div class="social-icon">
+              <a href="#">
+                <img src="./images/icon-twitter.svg" alt="Twitter">
+              </a>
+            </div>
+            <div class="social-icon">
+              <a href="#">
+                <img src="./images/icon-pinterest.svg" alt="Pinterest">
+              </a>
+            </div>
+
+            <div id="share-icon" class="share-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+            </div>
+          </div> -->
+
         </div>    
-        <!-- Share -->
+
       </div>
 
     </section>
   </main>
 
+  <script src="./js/app.js"></script>
 </body>
 </html>
