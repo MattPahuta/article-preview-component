@@ -1,4 +1,21 @@
-
+/* Custom properties */
+:root {
+  /* fonts */
+  --ff-sans: "Manrope", sans-serif;
+  /* font sizes */
+  --fs-500: 1.25rem;
+  --fs-400: 1rem;
+  --fs-300: 0.825rem;
+  /* font weights */
+  --fw-700: 700;
+  --fw-500: 500;
+  /* colors */
+  --clr-white: hsla(0, 0%, 100%, 1);
+  --clr-dark-blue-primary: hsla(217, 19%, 35%, 1);
+  --clr-dark-blue-secondary: hsla(214, 17%, 51%, 1);
+  --clr-accent-light: hsla(212, 23%, 69%, 1);
+  --clr-light-gray-blue: hsla(210, 46%, 95%, 1);
+}
 
 /*  Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -47,17 +64,15 @@ h6 {
   isolation: isolate;
 }
 
+/* General Styles */
 body {
   min-height: 100vh;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   display: grid;
   place-items: center;
-  color: #6E8098;
-  background: #ECF2F8;
-  font-family: "Manrope", sans-serif;
-  font-weight: 500;
+  color: var(--clr-dark-blue-secondary);
+  background: var(--clr-light-gray-blue);
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-500);
   line-height: 1.5; 
 }
 
@@ -68,11 +83,8 @@ body {
 .article-card {
   max-width: 330px;
   display: grid;
-  grid-template-rows: auto 1fr;
-
-  font-size: 0.825rem;
-  /* overflow: hidden; */
-  background: #ffffff;
+  font-size: var(--fs-300);
+  background: var(--clr-white);
   border-radius: 10px;
   box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
 }
@@ -91,30 +103,27 @@ body {
 
 .card-heading {
   margin-bottom: 12px;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-700);
   letter-spacing: 0.2px;
-  color: #48556A;
+  color: var(--clr-dark-blue-primary);
 }
 
 .card-summary {
-
   letter-spacing: 0.1px;
 }
-
 
 /* card footer */
 .card-footer {
   height: 64px;
   padding: 0 32px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .bg-footer__active {
-  background: #48556A;
+  background: var(--clr-dark-blue-primary);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -134,33 +143,28 @@ body {
 }
 
 .card-meta {
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 .author {
-  font-weight: 700;
+  font-weight: var(--fw-700);
   letter-spacing: 0.1px;
   color: #48556A;
 }
 
 .article-date {
-  color: #9DAEC2;
+  color: var(--clr-accent-light);
 }
 
 .share-icon {
   width: 32px;
   height: 32px;
-  /* background: #ECF2F8; */
   border-radius: 50%;
-
   display: grid;
   place-items: center;
   align-self: center;
-
   cursor: pointer;
 }
-
-
 
 /* Active share styles */
 .card-share {
@@ -168,14 +172,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .card-social {
   display: flex;
   gap: 1.325rem;
 }
-
 
 .hidden {
   display: none;
@@ -184,7 +186,7 @@ body {
 .share-label {
   text-transform: uppercase;
   letter-spacing: 5px;
-  color: #9DAEC2;
+  color: var(--clr-accent-light);
 }
 
 .social-icon-list {
@@ -195,22 +197,29 @@ body {
   gap: 1rem;
 }
 
+.social-icon {
+  transition: transform .2s ease-in-out;
+}
 
+.social-icon:hover,
+.social-icon:active {
+  transform: scale(1.5);
+}
 
 .bg-light__share {
-  background: #ECF2F8;
+  background: var(--clr-light-gray-blue);
 }
 
 .bg-dark__share {
-  background: #6E8098;
+  background: var(--clr-dark-blue-secondary);
 }
 
 .share-arrow-default {
-  fill: #6E8098;
+  fill: var(--clr-dark-blue-secondary);
 }
 
 .share-arrow-active {
-  fill: #ffffff;
+  fill: var(--clr-white);
 }
 
 @media (min-width: 56em) {
@@ -218,21 +227,21 @@ body {
     position: relative;
     max-width: 730px;
     grid-template-columns: 40% 60%;
-
   }
 
   .article-img {
     height: 100%;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
   }
 
   .card-content {
-    padding: 32px 40px 20px 40px;
+    padding: 32px 40px 22px 40px;
   }
 
   .card-heading {
-    font-size: 20px;
+    font-size: var(--fs-500);
     letter-spacing: 0.25px;
   }
 
@@ -241,15 +250,11 @@ body {
   }
 
   .bg-footer__active {
-    background: #ffffff;
+    background: var(--clr-white);
   }
 
   .author-info__display {
     display: flex;
-  }
-
-  .card__share-icon--active {
-    background-color: red;
   }
 
   .card-share {
@@ -259,7 +264,7 @@ body {
     right: -70px;
     padding: 1.125em 2.25em;
     border-radius: 10px;
-    background-color: #48556A;
+    background: var(--clr-dark-blue-primary);
   }
   /* down arrow of article share - desktop */
   .card-share::after {
@@ -269,11 +274,10 @@ body {
     height: 24px;
     bottom: -12px;
     left: 112px;
-    background: #48556A;
-    /* make this 24x24 square a triangle */
+    background: var(--clr-dark-blue-primary);
+    /* make this 24x24 square a triangle: */
     transform: rotate(-45deg); 
   }
 
 }
-
 
