@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://your-solution-url.com)
-- Live Site URL: [](https://article-preview-component-five-murex.vercel.app/)
+[Frontend Mentor Solution](https://your-solution-url.com)
+[Live Site URL](https://article-preview-component-five-murex.vercel.app/)
 
 ## My process
 
