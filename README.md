@@ -24,13 +24,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/project-ss.webp)
+![](./images/project-ss.png)
+![](./images/project-ss-2.png)
 
 
 ### Links
 
-[Frontend Mentor Solution](https://your-solution-url.com)
-[Live Site URL](https://article-preview-component-five-murex.vercel.app/)
+- Solution URL: [Frontend Mentor Solution](https://your-solution-url.com)
+- Live Site URL: [Vercel-hosted demo site](https://article-preview-component-five-murex.vercel.app/)
 
 ## My process
 
