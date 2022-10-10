@@ -66,6 +66,7 @@ body {
 }
 
 .article-card {
+  max-width: 330px;
   display: grid;
   grid-template-rows: auto 1fr;
 
@@ -80,6 +81,8 @@ body {
 	object-fit: cover;
 	width: 100%;
 	height: 18.5vh;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card-content {
@@ -110,21 +113,19 @@ body {
   align-items: center;
 }
 
-/* .card__footer--active {
-  background: #48556A;
-} */
-
-/* .bg-footer {
-  background: #ffffff;
-  background: #48556A;
-} */
-
 .bg-footer__active {
   background: #48556A;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .author-info {
   display: flex;
+}
+
+/* handle hiding author info on mobile (default) */
+.author-info__display {
+  display: none;
 }
 
 .author-avatar {
@@ -162,12 +163,6 @@ body {
 
 
 /* Active share styles */
-
-/* testing only */
-/* .card-footer {
-  background: #48556A;
-} */
-
 .card-share {
   height: 64px;
   display: flex;
@@ -218,7 +213,7 @@ body {
   fill: #ffffff;
 }
 
-@media (min-width: 42em) {
+@media (min-width: 56em) {
   .article-card {
     position: relative;
     max-width: 730px;
@@ -228,6 +223,8 @@ body {
 
   .article-img {
     height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 
   .card-content {
@@ -247,6 +244,9 @@ body {
     background: #ffffff;
   }
 
+  .author-info__display {
+    display: flex;
+  }
 
   .card__share-icon--active {
     background-color: red;

@@ -11,7 +11,7 @@ shareIcon.addEventListener('click', function() {
   if (cardShare.classList.contains('hidden')) { // if sharing is hidden
     // toggle hidden class for share/author info
     cardShare.classList.remove('hidden');
-    // authorInfo.classList.add('hidden');
+    authorInfo.classList.add('author-info__display');
     // change card footer bg color to dark
     cardFooter.classList.add('bg-footer__active');
 
@@ -24,7 +24,7 @@ shareIcon.addEventListener('click', function() {
   } else {
     // toggle hidden class for share/author info
     cardShare.classList.add('hidden');
-    authorInfo.classList.remove('hidden');
+    authorInfo.classList.remove('author-info__display');
     // remove dark bg from card footer
     cardFooter.classList.remove('bg-footer__active');
 
@@ -37,11 +37,3 @@ shareIcon.addEventListener('click', function() {
   }
 
 })
-
-
-// shareIcon.addEventListener('click', () => {
-//   cardFooter.classList.toggle('card__footer--active');
-//   shareIcon.classList.toggle('card__share-icon--active');
-//   cardShare.classList.toggle('hidden');
-//   authorInfo.classList.toggle('hidden');
-// })
